@@ -1,0 +1,150 @@
+[
+	'curso_id' => 3
+	'descricao' => 'ADMINISTRAÇÃO CONTEMPORÂNEA',
+	'codigo' => 'AD431',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'CALCULO DIFERENCIAL E INTEGRAL 1',
+	'codigo' => 'MA026',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'INTRODUÇÃO AOS SISTEMAS DE INFORMAÇÃO',
+	'codigo' => 'IF966',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'MATEMÁTICA DISCRETA PARA COMPUTAÇÃO',
+	'codigo' => 'IF967',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'PROGRAMAÇÃO 1',
+	'codigo' => 'IF968',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'ALGORITMOS E ESTRUTURAS DE DADOS',
+	'codigo' => 'IF969',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'ANÁLISE DAS ORGANIZACOES',
+	'codigo' => 'AD291',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'ESTATÍSTICA E PROBABILIDADE PARA COMPUTAÇÃO',
+	'codigo' => 'IF971',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'INGLÊS PARA COMPUTAÇÃO',
+	'codigo' => 'LE732',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'LÓGICA PARA COMPUTAÇÃO',
+	'codigo' => 'IF972',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'COMPORTAMENTO ORGANIZACIONAL',
+	'codigo' => 'AD193',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'CONTABILIDADE DE CUSTOS E GERENCIAL',
+	'codigo' => 'CT503',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'FUNDAMENTOS DE SISTEMAS DE INFORMAÇÃO',
+	'codigo' => 'IF973',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'ORGANIZAÇÃO DE COMPUTADORES E SISTEMAS OPERACIONAIS',
+	'codigo' => 'IF974',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'REDES DE COMPUTADORES',
+	'codigo' => 'IF975',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'BANCO DE DADOS',
+	'codigo' => 'IF976',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'ENGENHARIA DE SOFTWARE',
+	'codigo' => 'IF977',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'GESTÃO DE PROCESSOS DE NEGÓCIO',
+	'codigo' => 'IF978',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'PLANEJAMENTO E GERENCIAMENTO DE PROJETOS',
+	'codigo' => 'IF979',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'SISTEMAS DE GESTÃO EMPRESARIAL',
+	'codigo' => 'IF980',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'COMUNICAÇÃO TÉCNICA E CIENTÍFICA',
+	'codigo' => 'CO691',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'GESTÃO DA INFORMAÇÃO E DO CONHECIMENTO',
+	'codigo' => 'IF982',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'SISTEMAS DE APOIO À DECISÃO',
+	'codigo' => 'IF983',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'ADMINISTRAÇÃO DE BANCO DE DADOS',
+	'codigo' => 'IF991',
+	'created_at' => date("Y-m-d H:i:s")
+],
+[
+	'curso_id' => 3
+	'descricao' => 'ECONOMIA DAS EMPRESAS',
+	'codigo' => 'EC453',
+	'created_at' => date("Y-m-d H:i:s")
+],

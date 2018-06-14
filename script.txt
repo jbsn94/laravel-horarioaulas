@@ -1,0 +1,38 @@
+SI
+
+document.getElementById('oi').textContent.split(/\r?\n|\r/g).map((value,i,arr) => {if(i > 0){
+if(i == 1){
+	return arr[0]+' '+arr[i];
+}
+return value
+}}).filter(item => item).map(item => {
+return {
+codigo: item.split('-')[0],
+nome: item.split('-')[1].substr(1).replace(' OBRIG','').replace(' ELETIVO','')
+}
+}).filter(item => {
+
+console.log(`[
+	'curso_id' => 2
+	'descricao' => '${item.nome}',
+	'codigo' => '${item.codigo}',
+	'created_at' => date("Y-m-d H:i:s")
+],`);
+})
+
+EG
+
+document.getElementById('oi').textContent.split(/\r?\n|\r/g).filter(item => item).map(item => {
+return {
+codigo: item.split('-')[0],
+nome: item.split('-')[1].substr(1).replace('OBRIGATÓRIO','').replace('ELETIVO','').slice(0,-2)
+}
+}).filter(item => {
+
+console.log(`[
+	'curso_id' => 4
+	'descricao' => '${item.nome}',
+	'codigo' => '${item.codigo}',
+	'created_at' => date("Y-m-d H:i:s")
+],`);
+})
