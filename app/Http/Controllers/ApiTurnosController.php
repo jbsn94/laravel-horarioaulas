@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Centro as Model;
+use App\Turno as Model;
 use Illuminate\Http\Request;
 
-class ApiCentrosController extends Controller
+class ApiTurnosController extends Controller
 {
     public function __construct(Model $model)
     {
@@ -13,17 +13,17 @@ class ApiCentrosController extends Controller
 
     /**
      * @SWG\Get(
-     *      path="/centros",
-     *      tags={"Centros"},
-     *      summary="Pegar a lista de centros",
-     *      description="Retorna a lista de centros",
+     *      path="/turnos",
+     *      tags={"Turnos"},
+     *      summary="Pegar a lista de turnos",
+     *      description="Retorna a lista de turnos",
      *      @SWG\Response(
      *          response=200,
      *          description="successful operation"
      *       ),
      *     )
      *
-     * Returns lista de centros
+     * Returns lista de turnos
      */
     public function index()
     {
@@ -32,9 +32,9 @@ class ApiCentrosController extends Controller
 
     /**
      * @SWG\Post(
-     *     path="/centros",
-     *     tags={"Centros"},
-     *     summary="Cadastrar um novo centro",
+     *     path="/turnos",
+     *     tags={"Turnos"},
+     *     summary="Cadastrar um novo turno",
      *     @SWG\Response(
      *         response=405,
      *         description="Invalid input"
@@ -44,30 +44,28 @@ class ApiCentrosController extends Controller
      *      in="body",
      *      description="Parâmetros da requisição",
      *      @SWG\Schema(
-     *          @SWG\Property(property="descricao", type="string", example="Centro de Informática"),
-     *          @SWG\Property(property="sigla", type="string", example="CIN"),
+     *          @SWG\Property(property="descricao", type="string", example="Manhã"),
      *      ),
      *  ),
      * )
      */
     public function store(Request $request)
     {
-        $centro = new $this->model;
-        $centro->descricao = app('request')->all()['descricao'];
-        $centro->sigla = app('request')->all()['sigla'];
-        $centro->save();
-        return response()->json($centro);
+        $turno = new $this->model;
+        $turno->descricao = app('request')->all()['descricao'];
+        $turno->save();
+        return response()->json($turno);
     }
 
     /**
      * @SWG\Get(
-     *      path="/centros/{id}",
-     *      tags={"Centros"},
-     *      summary="Visualizar um centro",
-     *      description="Retorna o centro pelo ID",
+     *      path="/turnos/{id}",
+     *      tags={"Turnos"},
+     *      summary="Visualizar um turno",
+     *      description="Retorna o turno pelo ID",
      *      @SWG\Parameter(
      *          name="id",
-     *          description="ID do centro",
+     *          description="ID do turno",
      *          required=true,
      *          type="integer",
      *          in="path"
@@ -78,7 +76,7 @@ class ApiCentrosController extends Controller
      *       ),
      *     )
      *
-     * Returns lista de centros
+     * Returns lista de turnos
      */
     public function show($id)
     {
@@ -87,16 +85,16 @@ class ApiCentrosController extends Controller
 
     /**
      * @SWG\Put(
-     *     path="/centros/{id}",
-     *     tags={"Centros"},
-     *     summary="Atualizar um centro existente",
+     *     path="/turnos/{id}",
+     *     tags={"Turnos"},
+     *     summary="Atualizar um turno existente",
      *     @SWG\Response(
      *         response=405,
      *         description="Invalid input"
      *     ),
      *      @SWG\Parameter(
      *          name="id",
-     *          description="ID do centro",
+     *          description="ID do turno",
      *          required=true,
      *          type="integer",
      *          in="path"
@@ -106,30 +104,28 @@ class ApiCentrosController extends Controller
      *      in="body",
      *      description="Parâmetros da requisição",
      *      @SWG\Schema(
-     *          @SWG\Property(property="descricao", type="string", example="Centro de Informática"),
-     *          @SWG\Property(property="sigla", type="string", example="CIN"),
+     *          @SWG\Property(property="descricao", type="string", example="Manhã"),
      *      ),
      *  ),
      * )
      */
     public function update(Request $request, $id)
     {
-        $centro = $this->model->find($id);
-        $centro->descricao = app('request')->all()['descricao'];
-        $centro->sigla = app('request')->all()['sigla'];
-        $centro->save();
-        return response()->json($centro);
+        $turno = $this->model->find($id);
+        $turno->descricao = app('request')->all()['descricao'];
+        $turno->save();
+        return response()->json($turno);
     }
 
     /**
      * @SWG\Delete(
-     *      path="/centros/{id}",
-     *      tags={"Centros"},
-     *      summary="Remover um centro",
-     *      description="Deleta o centro pelo ID",
+     *      path="/turnos/{id}",
+     *      tags={"Turnos"},
+     *      summary="Remove um turno",
+     *      description="Deleta o turno pelo ID",
      *      @SWG\Parameter(
      *          name="id",
-     *          description="ID do centro",
+     *          description="ID do turno",
      *          required=true,
      *          type="integer",
      *          in="path"

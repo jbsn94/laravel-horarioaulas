@@ -14,7 +14,7 @@ class ApiDisciplinasController extends Controller
     /**
      * @SWG\Get(
      *      path="/centros/{centro}/cursos/{curso}/disciplinas",
-     *      tags={"disciplinas"},
+     *      tags={"Disciplinas"},
      *      summary="Pegar a lista de disciplinas",
      *      description="Retorna a lista de disciplinas de um curso",
      *      @SWG\Parameter(
@@ -47,7 +47,7 @@ class ApiDisciplinasController extends Controller
     /**
      * @SWG\Post(
      *     path="/centros/{centro}/cursos/{curso}/disciplinas",
-     *     tags={"disciplinas"},
+     *     tags={"Disciplinas"},
      *     summary="Cadastrar uma nova disciplina",
      *     @SWG\Response(
      *         response=405,
@@ -91,7 +91,7 @@ class ApiDisciplinasController extends Controller
     /**
      * @SWG\Get(
      *      path="/centros/{centro}/cursos/{curso}/disciplinas/{id}",
-     *      tags={"disciplinas"},
+     *      tags={"Disciplinas"},
      *      summary="Visualizar um curso do centro",
      *      description="Retorna o curso pelo ID",
      *      @SWG\Parameter(
@@ -131,7 +131,7 @@ class ApiDisciplinasController extends Controller
     /**
      * @SWG\Put(
      *     path="/centros/{centro}/cursos/{curso}/disciplinas/{id}",
-     *     tags={"disciplinas"},
+     *     tags={"Disciplinas"},
      *     summary="Atualizar uma disciplina existente",
      *     @SWG\Response(
      *         response=405,
@@ -181,7 +181,7 @@ class ApiDisciplinasController extends Controller
     /**
      * @SWG\Delete(
      *      path="/centros/{centro}/cursos/{curso}/disciplinas/{id}",
-     *      tags={"disciplinas"},
+     *      tags={"Disciplinas"},
      *      summary="Remove uma disciplina",
      *      description="Deleta a disciplina pelo ID",
      *      @SWG\Parameter(

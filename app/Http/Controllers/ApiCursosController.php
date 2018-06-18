@@ -14,7 +14,7 @@ class ApiCursosController extends Controller
     /**
      * @SWG\Get(
      *      path="/centros/{centro}/cursos",
-     *      tags={"cursos"},
+     *      tags={"Cursos"},
      *      summary="Pegar a lista de cursos",
      *      description="Retorna a lista de cursos de um centro",
      *      @SWG\Parameter(
@@ -40,7 +40,7 @@ class ApiCursosController extends Controller
     /**
      * @SWG\Post(
      *     path="/centros/{centro}/cursos",
-     *     tags={"cursos"},
+     *     tags={"Cursos"},
      *     summary="Cadastrar um novo curso",
      *     @SWG\Response(
      *         response=405,
@@ -75,7 +75,7 @@ class ApiCursosController extends Controller
     /**
      * @SWG\Get(
      *      path="/centros/{centro}/cursos/{id}",
-     *      tags={"cursos"},
+     *      tags={"Cursos"},
      *      summary="Visualizar um curso do centro",
      *      description="Retorna o curso pelo ID",
      *      @SWG\Parameter(
@@ -108,7 +108,7 @@ class ApiCursosController extends Controller
     /**
      * @SWG\Put(
      *     path="/centros/{centro}/cursos/{id}",
-     *     tags={"cursos"},
+     *     tags={"Cursos"},
      *     summary="Atualizar um curso existente",
      *     @SWG\Response(
      *         response=405,
@@ -150,7 +150,7 @@ class ApiCursosController extends Controller
     /**
      * @SWG\Delete(
      *      path="/centros/{centro}/cursos/{id}",
-     *      tags={"cursos"},
+     *      tags={"Cursos"},
      *      summary="Remover um curso",
      *      description="Deleta o curso pelo ID",
      *      @SWG\Parameter(

@@ -11,13 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'CentrosController@index');
 
 Route::get('centros', 'CentrosController@index');
 
 Route::resource('api/v1/centros','ApiCentrosController', ['except' => ['create','edit']]);
+
+Route::resource('api/v1/turnos','ApiTurnosController', ['except' => ['create','edit']]);
+
+Route::resource('api/v1/periodos','ApiPeriodosController', ['except' => ['create','edit']]);
+
+Route::resource('api/v1/dias','ApiDiasController', ['except' => ['create','edit']]);
 
 Route::resource('api/v1/centros/{centro}/cursos','ApiCursosController', ['except' => ['create','edit']]);
 
