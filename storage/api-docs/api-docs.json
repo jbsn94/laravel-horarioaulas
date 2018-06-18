@@ -1,0 +1,496 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "API Grade de hor\u00e1rios",
+        "description": "Documenta\u00e7\u00e3o para a API de gra de de hor\u00e1rios da UFPE",
+        "contact": {
+            "email": "jbsn@cin.ufpe.br"
+        },
+        "version": "1.0.0"
+    },
+    "host": "192.168.0.102",
+    "basePath": "/api/v1",
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "paths": {
+        "/centros": {
+            "get": {
+                "tags": [
+                    "centros"
+                ],
+                "summary": "Pegar a lista de centros",
+                "description": "Retorna a lista de centros",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "centros"
+                ],
+                "summary": "Cadastrar um novo centro",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Par\u00e2metros da requisi\u00e7\u00e3o",
+                        "schema": {
+                            "properties": {
+                                "descricao": {
+                                    "type": "string",
+                                    "example": "Centro de Inform\u00e1tica"
+                                },
+                                "sigla": {
+                                    "type": "string",
+                                    "example": "CIN"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            }
+        },
+        "/centros/{id}": {
+            "get": {
+                "tags": [
+                    "centros"
+                ],
+                "summary": "Visualizar um centro",
+                "description": "Retorna o centro pelo ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID do centro",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "centros"
+                ],
+                "summary": "Atualizar um centro existente",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID do centro",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Par\u00e2metros da requisi\u00e7\u00e3o",
+                        "schema": {
+                            "properties": {
+                                "descricao": {
+                                    "type": "string",
+                                    "example": "Centro de Inform\u00e1tica"
+                                },
+                                "sigla": {
+                                    "type": "string",
+                                    "example": "CIN"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "centros"
+                ],
+                "summary": "Remover um centro",
+                "description": "Deleta o centro pelo ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID do centro",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/centros/{centro}/cursos": {
+            "get": {
+                "tags": [
+                    "cursos"
+                ],
+                "summary": "Pegar a lista de cursos",
+                "description": "Retorna a lista de cursos de um centro",
+                "parameters": [
+                    {
+                        "name": "centro",
+                        "in": "path",
+                        "description": "ID do centro",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "cursos"
+                ],
+                "summary": "Cadastrar um novo curso",
+                "parameters": [
+                    {
+                        "name": "centro",
+                        "in": "path",
+                        "description": "ID do centro",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Par\u00e2metros da requisi\u00e7\u00e3o",
+                        "schema": {
+                            "properties": {
+                                "descricao": {
+                                    "type": "string",
+                                    "example": "Sistemas de Informa\u00e7\u00e3o"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            }
+        },
+        "/centros/{centro}/cursos/{id}": {
+            "get": {
+                "tags": [
+                    "cursos"
+                ],
+                "summary": "Visualizar um curso do centro",
+                "description": "Retorna o curso pelo ID",
+                "parameters": [
+                    {
+                        "name": "centro",
+                        "in": "path",
+                        "description": "ID do centro",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID do curso",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "cursos"
+                ],
+                "summary": "Atualizar um curso existente",
+                "parameters": [
+                    {
+                        "name": "centro",
+                        "in": "path",
+                        "description": "ID do centro",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID do curso",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Par\u00e2metros da requisi\u00e7\u00e3o",
+                        "schema": {
+                            "properties": {
+                                "descricao": {
+                                    "type": "string",
+                                    "example": "Sistemas de Informa\u00e7\u00e3o"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "cursos"
+                ],
+                "summary": "Remover um curso",
+                "description": "Deleta o curso pelo ID",
+                "parameters": [
+                    {
+                        "name": "centro",
+                        "in": "path",
+                        "description": "ID do centro",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID do curso",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/centros/{centro}/cursos/{curso}/disciplinas": {
+            "get": {
+                "tags": [
+                    "disciplinas"
+                ],
+                "summary": "Pegar a lista de disciplinas",
+                "description": "Retorna a lista de disciplinas de um curso",
+                "parameters": [
+                    {
+                        "name": "centro",
+                        "in": "path",
+                        "description": "ID do centro",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "curso",
+                        "in": "path",
+                        "description": "ID do curso",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "disciplinas"
+                ],
+                "summary": "Cadastrar uma nova disciplina",
+                "parameters": [
+                    {
+                        "name": "centro",
+                        "in": "path",
+                        "description": "ID do centro",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "curso",
+                        "in": "path",
+                        "description": "ID do curso",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Par\u00e2metros da requisi\u00e7\u00e3o",
+                        "schema": {
+                            "properties": {
+                                "descricao": {
+                                    "type": "string",
+                                    "example": "ADMINISTRA\u00c7\u00c3O CONTEMPOR\u00c2NEA"
+                                },
+                                "codigo": {
+                                    "type": "string",
+                                    "example": "AD431"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            }
+        },
+        "/centros/{centro}/cursos/{curso}/disciplinas/{id}": {
+            "get": {
+                "tags": [
+                    "disciplinas"
+                ],
+                "summary": "Visualizar um curso do centro",
+                "description": "Retorna o curso pelo ID",
+                "parameters": [
+                    {
+                        "name": "centro",
+                        "in": "path",
+                        "description": "ID do centro",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "curso",
+                        "in": "path",
+                        "description": "ID do curso",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID da disciplina",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "disciplinas"
+                ],
+                "summary": "Atualizar uma disciplina existente",
+                "parameters": [
+                    {
+                        "name": "centro",
+                        "in": "path",
+                        "description": "ID do centro",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "curso",
+                        "in": "path",
+                        "description": "ID do curso",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID da disciplina",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Par\u00e2metros da requisi\u00e7\u00e3o",
+                        "schema": {
+                            "properties": {
+                                "descricao": {
+                                    "type": "string",
+                                    "example": "ADMINISTRA\u00c7\u00c3O CONTEMPOR\u00c2NEA"
+                                },
+                                "codigo": {
+                                    "type": "string",
+                                    "example": "AD431"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "disciplinas"
+                ],
+                "summary": "Remove uma disciplina",
+                "description": "Deleta a disciplina pelo ID",
+                "parameters": [
+                    {
+                        "name": "centro",
+                        "in": "path",
+                        "description": "ID do centro",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "curso",
+                        "in": "path",
+                        "description": "ID do curso",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID da disciplina",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {}
+}

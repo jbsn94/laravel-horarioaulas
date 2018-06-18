@@ -11,7 +11,7 @@ class Cursos extends Seeder
      */
     public function run()
     {
-        DB::table('dias')->insert([
+        DB::table('cursos')->insert([
             [
                 'descricao' => 'Administração',
                 'centro_id' => 1,

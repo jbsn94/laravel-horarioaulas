@@ -16,5 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call(Turnos::class);
         $this->call(Periodos::class);
         $this->call(Centros::class);
+        $this->call(Cursos::class);
+        $this->call(DisciplinasSI::class);
     }
 }

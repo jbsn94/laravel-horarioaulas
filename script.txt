@@ -13,7 +13,7 @@ nome: item.split('-')[1].substr(1).replace(' OBRIG','').replace(' ELETIVO','')
 }).filter(item => {
 
 console.log(`[
-	'curso_id' => 2
+	'curso_id' => 2,
 	'descricao' => '${item.nome}',
 	'codigo' => '${item.codigo}',
 	'created_at' => date("Y-m-d H:i:s")
@@ -30,7 +30,7 @@ nome: item.split('-')[1].substr(1).replace('OBRIGATÓRIO','').replace('ELETIVO',
 }).filter(item => {
 
 console.log(`[
-	'curso_id' => 4
+	'curso_id' => 4,
 	'descricao' => '${item.nome}',
 	'codigo' => '${item.codigo}',
 	'created_at' => date("Y-m-d H:i:s")
