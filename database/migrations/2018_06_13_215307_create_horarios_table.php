@@ -19,9 +19,6 @@ class CreateHorariosTable extends Migration
             $table->string('end_at');
             $table->timestamps();
 
-            $table->unsignedInteger('curso_id');
-            $table->foreign('curso_id')->references('id')->on('cursos');
-
             $table->unsignedInteger('disciplina_id');
             $table->foreign('disciplina_id')->references('id')->on('disciplinas');
 
@@ -30,6 +27,9 @@ class CreateHorariosTable extends Migration
 
             $table->unsignedInteger('dia_id');
             $table->foreign('dia_id')->references('id')->on('dias');
+
+            $table->unsignedInteger('turno_id');
+            $table->foreign('turno_id')->references('id')->on('turnos');
         });
     }
 
