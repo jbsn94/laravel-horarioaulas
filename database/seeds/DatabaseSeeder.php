@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
         $this->call(Centros::class);
         $this->call(Cursos::class);
         $this->call(DisciplinasSI::class);
+        $this->call(Horarios1PSI::class);
     }
 }

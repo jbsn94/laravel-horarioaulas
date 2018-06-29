@@ -28,3 +28,6 @@ Route::resource('api/v1/centros/{centro}/cursos','ApiCursosController', ['except
 Route::resource('api/v1/centros/{centro}/cursos/{curso}/disciplinas','ApiDisciplinasController', ['except' => ['create','edit']]);
 
 Route::get('centros/{id}/cursos', 'CursosController@index');
+
+Route::get('centros/{centro}/cursos/{curso}/horarios', 'HorariosController@index');
+

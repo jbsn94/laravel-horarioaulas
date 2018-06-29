@@ -10,4 +10,9 @@ class Curso extends Model
     {
         return $this->belongsTo('App\Centro');
     }
+
+    public function disciplinas()
+    {
+        return $this->hasMany('App\Disciplina');
+    }
 }
