@@ -31,3 +31,5 @@ Route::get('centros/{id}/cursos', 'CursosController@index');
 
 Route::get('centros/{centro}/cursos/{curso}/horarios', 'HorariosController@index');
 
+Route::post('api/v1/aluno/horarios', 'HorariosController@aluno');
+
