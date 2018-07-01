@@ -1,5 +1,5 @@
 # Api em laravel de horários acadêmicos
-Essa api sfoi constrída para o registro de horários das disciplinas de cada curso de uma instituição de ensino, a instituição de ensino utilizada como base para construção dessa aplicação foi a [UFPE](http://www.ufpe.br/).
+Essa api foi constrída para o registro de horários das disciplinas de cada curso de uma instituição de ensino, a instituição de ensino utilizada como base para construção dessa aplicação foi a [UFPE](http://www.ufpe.br/).
 
 ### Equipe:
 - José Barbosa da Silva Neto ([jbsn@cin.ufpe.br](mailto:jbsn@cin.ufpe.br))
@@ -10,6 +10,7 @@ Essa api sfoi constrída para o registro de horários das disciplinas de cada cu
 - API de Disciplinas
 - API de horários
 - Implantação do Swagger como documentação da API
+- Seeder para Centros, Cursos, Disciplinas e Horários do curso de SI do CIN
 
 ### Fontes:
 - UFPE: https://www.ufpe.br/
